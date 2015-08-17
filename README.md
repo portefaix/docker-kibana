@@ -11,7 +11,8 @@ Port exported is : `5601`
 
 ## Supported tags
 
--	[`4.0.3`](https://github.com/portefaix/docker-kibana/tree/4.0.3)
+- `4.0`
+- `4.1.1`
 
 ## License
 

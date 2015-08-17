@@ -10,8 +10,13 @@ Port exported is : `5601`
 
 ## Usage
 
-	$ docker run -it -p 9090:5601 portefaix/kibana:4.1.1
+Launch a local Elasticsearch :
 
+    $ docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 portefaix/elasticsearch
+
+Run Kibana :
+
+	$ docker run -it --name=kibana -p 9090:5601 --link elasticsearch:elasticsearch portefaix/kibana:4.1.1
 
 ## Supported tags
 

@@ -8,6 +8,10 @@ This image is based on the official Alpine Linux.
 [Kibana][] is an open source data visualization platform.
 Port exported is : `5601`
 
+## Usage
+
+	$ docker run -it -p 9090:5601 portefaix/kibana:4.1.1
+
 
 ## Supported tags
 

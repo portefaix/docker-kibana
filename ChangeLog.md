@@ -1,6 +1,10 @@
 ChangeLog
 ===========
 
+# Version 0.3.0 (08/26/2015)
+
+- Add CircleCI
+
 # Version 0.2.0 (08/17/2015)
 
 - Refactoring build system

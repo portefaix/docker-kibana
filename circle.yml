@@ -12,6 +12,7 @@ dependencies:
     - "~/docker"
   override:
     - docker info
+    - docker pull portefaix/elasticsearch:1.7.1
     - docker build -t portefaix/kibana:4.0 4.0 
     - docker build -t portefaix/kibana:4.1 4.1 
 

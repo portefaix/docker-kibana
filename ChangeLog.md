@@ -1,6 +1,11 @@
 ChangeLog
 ===========
 
+# Version 0.4.0 (08/27/2015)
+
+- ``FIX`` Kibana 4.0.3
+- Refactoring CircleCI setup
+
 # Version 0.3.0 (08/26/2015)
 
 - Add CircleCI

@@ -20,7 +20,7 @@ Run Kibana :
 
 ## Supported tags
 
-- `4.0`
+- `4.0.3`
 - `4.1.1`
 
 ## License

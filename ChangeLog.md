@@ -1,6 +1,10 @@
 ChangeLog
 ===========
 
+# Version 0.5.0 (10/30/2015)
+
+- Add Kibana 4.2
+
 # Version 0.4.0 (08/27/2015)
 
 - ``FIX`` Kibana 4.0.3

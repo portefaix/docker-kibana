@@ -22,6 +22,7 @@ Run Kibana :
 
 - `4.0.3` [![](https://badge.imagelayers.io/portefaix/kibana:4.0.3.svg)](https://imagelayers.io/?images=portefaix/kibana:4.0.3 'imagelayers.io')
 - `4.1.1` [![](https://badge.imagelayers.io/portefaix/kibana:4.1.1.svg)](https://imagelayers.io/?images=portefaix/kibana:4.1.1 'imagelayers.io')
+- `4.2.0` [![](https://badge.imagelayers.io/portefaix/kibana:4.2.0.svg)](https://imagelayers.io/?images=portefaix/kibana:4.2.0 'imagelayers.io')
 
 
 ## License

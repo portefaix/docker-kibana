@@ -1,5 +1,12 @@
 # Portefaix Kibana
 
+* Master :
+[![Circle CI](https://circleci.com/gh/portefaix/docker-kibana/tree/master.svg?style=svg)](https://circleci.com/gh/portefaix/docker-kibana/tree/master)
+
+* Develop :
+[![Circle CI](https://circleci.com/gh/portefaix/docker-kibana/tree/develop.svg?style=svg)](https://circleci.com/gh/portefaix/docker-kibana/tree/develop)
+
+
 ![logo](http://pkgs.alpinelinux.org/assets/alpinelinux-logo.svg)
 
 [Alpine Linux][] is a Linux distribution built around musl libc and BusyBox.

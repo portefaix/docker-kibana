@@ -32,12 +32,18 @@ all: help
 help:
 	@echo -e "$(OK_COLOR)==== $(APP) ====$(NO_COLOR)"
 	@echo -e "$(WARN_COLOR)- build version=xx   : Make the Docker image"
+	@echo -e "$(WARN_COLOR)- run version=xx     : Run the Docker image"
 	@echo -e "$(WARN_COLOR)- publish version=xx : Publish the image"
 
 .PHONY: build
 build:
-	@echo -e "$(ok_color)[$(app)] build $(NAMESPACE)/$(IMAGE):$(VERSION)$(no_color)"
+	@echo -e "$(OK_COLOR)[$(APP)] build $(NAMESPACE)/$(IMAGE):$(VERSION)$(NO_COLOR)"
 	@$(DOCKER) build -t $(NAMESPACE)/$(IMAGE):${VERSION} $(version)
+
+.PHONY: run
+run:
+	@echo -e "$(OK_COLOR)[$(APP)] run $(NAMESPACE)/$(IMAGE):$(VERSION)$(NO_COLOR)"
+	docker run --rm=true -p 9200:9200 -p 9300:9300 portefaix/elasticsearch:$(VERSION)
 
 .PHONY: login
 login:

@@ -43,7 +43,7 @@ build:
 .PHONY: run
 run:
 	@echo -e "$(OK_COLOR)[$(APP)] run $(NAMESPACE)/$(IMAGE):$(VERSION)$(NO_COLOR)"
-	docker run --rm=true -p 9200:9200 -p 9300:9300 $(NAMESPACE)/$(IMAGE):$(VERSION)
+	docker run --rm=true -p 5601:5601 $(NAMESPACE)/$(IMAGE):$(VERSION)
 
 .PHONY: login
 login:

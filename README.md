@@ -17,13 +17,11 @@ Port exported is : `5601`
 
 ## Usage
 
-Launch a local Elasticsearch :
+Install [docker compose][] and launch containers :
 
-    $ docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 portefaix/elasticsearch
+    $ docker-compose up
 
-Run Kibana :
-
-	$ docker run -it --name=kibana -p 9090:5601 --link elasticsearch:elasticsearch portefaix/kibana:4.1.1
+You could check *elasticsearch* on : `http://localhost:9200` and Kibana running on `http://localhost:5601/status`
 
 ## Supported tags
 
@@ -50,3 +48,5 @@ Nicolas Lamirault <nicolas.lamirault@gmail.com>
 [Alpine Linux]: http://www.alpinelinux.org
 
 [Kibana]: https://www.elastic.co/products/kibana
+
+[Docker Compose]: https://github.com/docker/compose

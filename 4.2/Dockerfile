@@ -22,11 +22,18 @@ RUN curl -LO https://download.elasticsearch.org/kibana/kibana/kibana-${KIBANA_VE
     ln -s /usr/bin/npm /usr/share/kibana/node/bin/npm && \
     rm -rf /var/cache/apk/* /kibana-${KIBANA_VERSION}-linux-x64.tar.gz
 
-RUN sed -i '/elasticsearch_url/s/localhost/elasticsearch/' /usr/share/kibana/config/kibana.yml
+COPY kibana.yml /usr/share/kibana/config/kibana.yml
+COPY docker-entrypoint.sh /usr/share/kibana/docker-entrypoint.sh
+RUN chmod +x /usr/share/kibana/docker-entrypoint.sh
+
+RUN curl -o /usr/local/bin/gosu -sSL "https://github.com/tianon/gosu/releases/download/1.2/gosu-amd64" && \
+    chmod +x /usr/local/bin/gosu
+
 
 RUN apk del curl ca-certificates && \
     rm -fr /tmp/* /var/cache/apk/*
 
 EXPOSE 5601
 
-CMD ["/usr/share/kibana/bin/kibana"]
+ENTRYPOINT ["/usr/share/kibana/docker-entrypoint.sh"]
+CMD ["kibana", "-c", "/usr/share/kibana/config/kibana.yml"]

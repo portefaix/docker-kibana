@@ -6,8 +6,7 @@
 * Develop :
 [![Circle CI](https://circleci.com/gh/portefaix/docker-kibana/tree/develop.svg?style=svg)](https://circleci.com/gh/portefaix/docker-kibana/tree/develop)
 
-
-![logo](http://pkgs.alpinelinux.org/assets/alpinelinux-logo.svg)
+![logo](https://raw.githubusercontent.com/1science/docker-alpine/latest/logo.png)
 
 [Alpine Linux][] is a Linux distribution built around musl libc and BusyBox.
 This image is based on the official Alpine Linux.
@@ -17,19 +16,18 @@ Port exported is : `5601`
 
 ## Usage
 
-Launch a local Elasticsearch :
+Install [docker compose][] and launch containers :
 
-    $ docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 portefaix/elasticsearch
+    $ docker-compose up
 
-Run Kibana :
-
-	$ docker run -it --name=kibana -p 9090:5601 --link elasticsearch:elasticsearch portefaix/kibana:4.1.1
+You could check *elasticsearch* on : `http://localhost:9200` and Kibana running on `http://localhost:5601/status`
 
 ## Supported tags
 
 - `4.0.3` [![](https://badge.imagelayers.io/portefaix/kibana:4.0.3.svg)](https://imagelayers.io/?images=portefaix/kibana:4.0.3 'imagelayers.io')
-- `4.1.1` [![](https://badge.imagelayers.io/portefaix/kibana:4.1.1.svg)](https://imagelayers.io/?images=portefaix/kibana:4.1.1 'imagelayers.io')
-- `4.2.0` [![](https://badge.imagelayers.io/portefaix/kibana:4.2.0.svg)](https://imagelayers.io/?images=portefaix/kibana:4.2.0 'imagelayers.io')
+- `4.1.3` [![](https://badge.imagelayers.io/portefaix/kibana:4.1.3.svg)](https://imagelayers.io/?images=portefaix/kibana:4.1.3 'imagelayers.io')
+- `4.2.1` [![](https://badge.imagelayers.io/portefaix/kibana:4.2.1.svg)](https://imagelayers.io/?images=portefaix/kibana:4.2.1 'imagelayers.io')
+- `4.3.0` [![](https://badge.imagelayers.io/portefaix/kibana:4.3.0.svg)](https://imagelayers.io/?images=portefaix/kibana:4.3.0 'imagelayers.io')
 
 
 ## License
@@ -50,3 +48,5 @@ Nicolas Lamirault <nicolas.lamirault@gmail.com>
 [Alpine Linux]: http://www.alpinelinux.org
 
 [Kibana]: https://www.elastic.co/products/kibana
+
+[Docker Compose]: https://github.com/docker/compose

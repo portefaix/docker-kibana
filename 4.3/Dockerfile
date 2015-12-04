@@ -1,4 +1,4 @@
-# VERSION 4.2.1
+# VERSION 4.3.0
 # AUTHOR:         Nicolas Lamirault <nicolas.lamirault@gmail.com>
 # DESCRIPTION:    portefaix/kibana
 
@@ -6,7 +6,7 @@ FROM portefaix/base:3.2
 MAINTAINER Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 # Kibana version
-ENV KIBANA_VERSION=4.2.1
+ENV KIBANA_VERSION=4.3.0
 
 RUN apk add --update curl ca-certificates
 

@@ -14,10 +14,12 @@ dependencies:
     - docker info
     - docker pull portefaix/elasticsearch:1.7.1
     - docker pull portefaix/elasticsearch:2.0.0
+    - docker pull portefaix/elasticsearch:2.2.0
     - docker build -t portefaix/kibana:4.0 4.0 
     - docker build -t portefaix/kibana:4.1 4.1 
     - docker build -t portefaix/kibana:4.2 4.2 
     - docker build -t portefaix/kibana:4.3 4.3 
+    - docker build -t portefaix/kibana:4.4 4.4 
 
 test:
   override:
@@ -30,7 +32,10 @@ test:
     - docker run -d -p 9092:5601 --link elasticsearch:elasticsearch portefaix/kibana:4.2; sleep 30
     - curl --retry 10 --retry-delay 5 -v http://localhost:9092
     - docker run -d -p 9093:5601 --link elasticsearch:elasticsearch portefaix/kibana:4.3; sleep 30
-    - curl --retry 10 --retry-delay 5 -v http://localhost:9093
+    - docker stop elasticsearch
+    - docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 portefaix/elasticsearch:2.2.0 ; sleep 30
+    - docker run -d -p 9094:5601 --link elasticsearch:elasticsearch portefaix/kibana:4.4; sleep 30
+    - curl --retry 10 --retry-delay 5 -v http://localhost:9094
 
 #deployment:
 #  hub: 

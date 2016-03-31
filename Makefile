@@ -1,4 +1,4 @@
-# Copyright (C) 2015  Nicolas Lamirault <nicolas.lamirault@gmail.com>
+# Copyright (C) 2015, 2016 Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ build:
 .PHONY: run
 run:
 	@echo -e "$(OK_COLOR)[$(APP)] run $(NAMESPACE)/$(IMAGE):$(VERSION)$(NO_COLOR)"
-	docker run --rm=true -p 5601:5601 $(NAMESPACE)/$(IMAGE):$(VERSION)
+	docker run --rm=true -p 5601:5601 --name $(NAMESPACE)_$(IMAGE) $(NAMESPACE)/$(IMAGE):$(VERSION)
 
 .PHONY: login
 login:
